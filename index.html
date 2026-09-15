@@ -48,10 +48,15 @@
         <p style="margin-left: 16px;">
           FoxOS
         </p>
+      <p id="timeElement" style="font-family: 'Roboto Mono', monospace;">
+        Time
+      </p>
 
-        <p style="margin-right: 16px;">
-          14/09/2026 12:39 PM
-        </p>
+        <script>
+          setInterval(function () {
+          document.querySelector("#timeElement").innerHTML = new Date().toLocaleString();
+          }, 1000);
+        </script>
 
         <p style="
           margin-left: 16px;
